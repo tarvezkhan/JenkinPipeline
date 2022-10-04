@@ -1,8 +1,8 @@
 pipeline{
     agent any
      options{
-        // retry(2)
-        quietPeriod(30)
+        retry(3)
+        // quietPeriod(30)
 
     }
     stages{
