@@ -13,7 +13,7 @@ pipeline{
                 }
             }
             steps{
-                echo "Hello ${fname}"
+                echo "Hello stage-one ${fname}"
             }
         }
         stage('One'){
@@ -24,7 +24,7 @@ pipeline{
                 }
             }
             steps{
-                echo "Hello ${fname}"
+                echo "Hello stage-two ${fname}"
             }
         }
     }
