@@ -3,11 +3,11 @@ pipeline{
     stages{
       stage (Stage-1-TK) {
         steps{
-          echo "Stage-1-TK"
+          echo "stage-1-TK"
       
 }  
 }
-      stage (Stage-2-TK) {
+      stage (stage-2-TK) {
         steps{
           echo "Stage-2-TK"    
 }  
