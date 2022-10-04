@@ -8,7 +8,7 @@ pipeline{
         stage('One'){
             when{
                 allOf{
-                    environment name: 'Tarvez', value: 'Khan'
+                    environment name: 'fname', value: 'Tarvez'
                     environment name: 'lname', value: 'Khan'
                 }
             }
