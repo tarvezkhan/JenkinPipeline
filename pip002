@@ -8,8 +8,6 @@ pipeline {
                            whoami
                            date
                      '''
-             
-                   
                 }
             }
                    
@@ -17,6 +15,7 @@ pipeline {
                 steps {
                 sh '''
                      ls
+                     pwd
                 '''
                 }
             }
