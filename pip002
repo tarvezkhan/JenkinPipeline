@@ -3,7 +3,9 @@ pipeline {
         stages {
             stage('stage-1') {
                 steps {
-                    'python -V'
+                   sh '''
+                      'python -V'
+                   '''
                 }
             }
                    
