@@ -1,9 +1,12 @@
 pipeline{
     agent any
+    environment{
+        name="Tarvez"
+        }
     stages{
         stage('Stage-1'){
             environment{
-               name="Tarvez"
+               name="Khan"
             }
             steps{
                 echo "Hello ${name}"
