@@ -1,0 +1,55 @@
+pipeline{
+    agent any
+    stages{
+        stage ('pre-build'){
+            steps{
+                sh'''
+                echo 'Pre-building Stage'
+                pwd
+                whoami
+                '''
+            }
+        }
+        stage ('build'){
+            steps{
+                sh'''
+                echo 'Building'
+                date
+                '''
+            }
+        }
+        stage ('Unit-test'){
+            steps{
+                sh'''
+                echo 'Unit-test'
+                '''
+            }
+        }
+        stage ('Deploy'){
+            steps{
+                sh'''
+                echo 'Deploying'
+                '''
+            }
+        }
+        stage ('Selenium Test'){
+            steps{
+                sh'''
+                echo 'Selenium Test'
+                '''
+            }
+        }
+        stage ('Deploy in Production'){
+            steps{
+                sh'''
+                echo 'Deploy in Production'
+                '''
+            }
+        }
+    }
+    post{
+        always{
+            echo "ALWAYS"
+        }
+    }
+}
