@@ -6,6 +6,15 @@ pipeline{
     stages{
         stage('One'){
             when{
+                environment name:"txt",value:"Hello"
+            }
+            steps{
+                echo "Hello There Stage One When block passed"
+
+            }
+        }
+        stage('Two'){
+            when{
                 environment name:"txt",value:"hello"
             }
             steps{
