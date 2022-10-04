@@ -6,9 +6,9 @@ pipeline{
     stages{
         stage('one'){
             steps{
-                sh'''
-                    echo Hello ${params.fname}
-                '''
+                
+                    echo "Hello ${params.fname}"
+                
 
             }
         }
