@@ -1,0 +1,31 @@
+pipeline{
+    agent any
+    environment{
+        fname="Tarvez"
+        lname="Khan"
+    }
+    stages{
+        stage('One'){
+            when{
+                allOf{
+                    environment fname:"Tarvez"
+                    environment lname="Khan" 
+                }
+            }
+            steps{
+                echo "Hello ${fname}"
+            }
+        }
+        stage('One'){
+            when{
+                anyOf{
+                    environment fname:"Tarvez"
+                    environment lname="Khan" 
+                }
+            }
+            steps{
+                echo "Hello ${fname}"
+            }
+        }
+    }
+}
