@@ -1,29 +1,3 @@
-// pipeline {
-//     agent any
-//     stages{
-//         stage('stage1'){
-//             stages{
-//                 stage('inner1'){
-//                     steps{
-//                         echo 'inner1'
-//                     }
-//                 }
-//             }
-//         }
-//         stage('stage2'){
-//             steps{
-//                 echo 'stage2'
-//             }
-//         }
-//         stage('stage3'){
-//             steps{
-//                 echo 'stage3'
-//             }
-//         }
-//     }
-// }
-
-
 pipeline{
     agent any
     stages{
@@ -36,11 +10,20 @@ pipeline{
             }
         } 
         }
-        
         stage('stage-2'){
                 steps{
                     echo 'stage2'
                 }
             }
+        stage('stage-3'){
+            stages{
+                stage('Innerstage-3'){
+                    steps{
+                        echo 'Innerstage-3'
+                    }
+                }
+            }
+        }
+
         }
     }
