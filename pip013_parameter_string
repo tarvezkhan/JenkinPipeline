@@ -1,0 +1,16 @@
+pipeline{
+    agent any
+    parameters{
+        string(name:"fname",defaultvalue:"Tarvez",description:"")
+    }
+    stages{
+        stage('one'){
+            steps{
+                sh'''
+                    echo Hello ${params.fname}
+                '''
+
+            }
+        }
+    }
+}
