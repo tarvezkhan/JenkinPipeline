@@ -3,9 +3,11 @@ pipeline {
         stages {
             stage('stage-1') {
                 steps {
-                   
-                     sh whoami
-                      
+                  withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']) {  
+                     sh '''
+                           whoami
+                     '''
+        }              
                    
                 }
             }
@@ -19,3 +21,4 @@ pipeline {
         }
     }
 
+        
