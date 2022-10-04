@@ -14,6 +14,8 @@ pipeline{
 
             }
         }
+    
+    }
     post{
         always{
             echo 'ALWAYS RUN'
@@ -29,11 +31,6 @@ pipeline{
         }
         changed{
             echo 'Run when status changes w.r.t to last run'
-        }
-    
-
-
-    }
-    
+        }  
     }
 }
