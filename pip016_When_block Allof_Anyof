@@ -16,7 +16,7 @@ pipeline{
                 echo "Hello stage-one ${fname}"
             }
         }
-        stage('One'){
+        stage('two'){
             when{
                 anyOf{
                     environment fname:"Tarvez"
