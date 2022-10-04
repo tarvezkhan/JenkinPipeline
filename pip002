@@ -3,11 +3,11 @@ pipeline {
         stages {
             stage('stage-1') {
                 steps {
-                  withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']) {  
+                  
                      sh '''
                            whoami
                      '''
-        }              
+             
                    
                 }
             }
