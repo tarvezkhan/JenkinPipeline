@@ -5,19 +5,27 @@ pipeline{
             steps{
                 parallel(
                     p1:{
-                    echo 'p1'
+                    sh'''
+                        pwd
+                    '''
                     },
                     p2:{
-                    echo 'p2'
+                    sh'''
+                        whoami
+                    '''
                     },
                     p3:{
-                    echo 'p3'
+                    sh'''
+                        uname -a
+                    '''
                     },
                     p4:{
-                    echo 'p4'
+                    sh'''
+                        date
+                    '''
                     },
                     p5:{
-                    echo 'p5'
+                    echo 'DONE'
                     },
 
                 )
