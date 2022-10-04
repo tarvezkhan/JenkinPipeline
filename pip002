@@ -1,17 +1,18 @@
-pipeline{
-  agent any
-    stages{
-      stage (stage-1-TK) {
-        steps{
-          echo "stage-1-TK"
-      
-}  
-}
-      stage (stage-2-TK) {
-        steps{
-          echo "Stage-2-TK"    
-}  
-}
+pipeline {
+   agent any
+        stages {
+            stage('stage-1') {
+                steps {
+                    echo 'Stage-1'
+                }
+            }
+                   
+            stage('stage-2') {
+                steps {
+                    echo 'Stage-2'
+                }
+            }
+            
+        }
+    }
 
-}
-}
