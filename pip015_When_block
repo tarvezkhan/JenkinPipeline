@@ -1,0 +1,17 @@
+pipeline{
+    agent any
+    environment{
+        txt="Hello"
+    }
+    stages{
+        stage('One'){
+            when{
+                environment name:"txt",value:"Hello"
+            }
+            steps{
+                echo "Hello There"
+
+            }
+        }
+    }
+}
