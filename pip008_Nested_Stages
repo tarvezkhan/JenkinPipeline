@@ -9,13 +9,6 @@ pipeline{
                 }
             }
         }
-            stages{
-                stage('Innerstage-2'){
-                    steps{
-                        echo 'Innerstage-2'
-                }
-            }
-        }
     }
         }
         stage('stage-2'){
