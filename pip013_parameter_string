@@ -7,20 +7,12 @@ pipeline{
     stages{
         stage('one'){
             steps{
-                
-                    "echo Hello ${params.fname}"
-                  
-                
-
+                "echo Hello ${params.fname}"
             }
         }
         stage('two'){
             steps{
-                
-                  
-                    "echo Hello ${params.lname}"
-                
-
+                "echo Hello ${params.lname}"
             }
         }
     }
