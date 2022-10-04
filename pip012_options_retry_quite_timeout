@@ -4,7 +4,7 @@ pipeline{
     //     name = "Tarvez"
     // }
     options{
-        retry(3)
+        retry(2)
     }
     stages{
         stage('one'){
