@@ -1,18 +1,18 @@
 pipeline{
     agent any
-    environment{
-        name = "Tarvez"
-    }
+    // environment{
+    //     name = "Tarvez"
+    // }
     options{
         retry(3)
     }
     stages{
         stage('one'){
             steps{
-                sh'''
-                echo Hello ${nam}
+                
+                error ("ERROR")
 
-                '''
+                
 
             }
         }
