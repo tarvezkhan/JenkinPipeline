@@ -1,15 +1,15 @@
 pipeline{
     agent any
     environment{
-        fname="Tarvez"
-        lname="Khan"
+        fname = "Tarvez"
+        lname = "Khan"
     }
     stages{
         stage('One'){
             when{
                 allOf{
-                    environment fname:"Tarvez"
-                    environment lname="Khan" 
+                    environment name:fname, value="Tarvez"
+                    environment name:lname, value="Khan"
                 }
             }
             steps{
@@ -19,8 +19,8 @@ pipeline{
         stage('two'){
             when{
                 anyOf{
-                    environment fname:"Tarvez"
-                    environment lname="Khan" 
+                    environment name:fname, value="Tarvez"
+                    environment name:lname, value="Khan"
                 }
             }
             steps{
