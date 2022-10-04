@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('One'){
             when{
-                environment name:"txt",value:"Hello"
+                environment name:"txt",value:"hello"
             }
             steps{
                 echo "Hello There"
