@@ -1,0 +1,33 @@
+pipeline{
+    agent any
+    stages{
+        stage ('stage-1') {
+            steps{
+                parallel(
+                    p1:{
+                    echo 'p1'
+                    },
+                    p2:{
+                    echo 'p2'
+                    },
+                    p3:{
+                    echo 'p3'
+                    },
+                    p4:{
+                    echo 'p4'
+                    },
+                    p5:{
+                    echo 'p5'
+                    },
+
+                )
+            }
+        }
+    }
+    post{
+        always{
+            echo 'ALWAYS RUN'
+        }
+  
+    }
+}
