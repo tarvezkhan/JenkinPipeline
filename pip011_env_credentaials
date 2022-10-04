@@ -7,8 +7,10 @@ pipeline{
         stage('one'){
             steps{
                 sh'''
+                    pwd
                     echo "Hello ${test_USR}"
                     echo "Hello ${test_PWS}"
+                    ls
                 '''
             }
         }
