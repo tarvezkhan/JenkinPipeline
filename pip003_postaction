@@ -1,0 +1,39 @@
+pipeline{
+    agent any
+    stages{
+        stage{
+            steps('step-1'){
+
+                sh'''
+
+                whoami
+                pwd
+                date
+
+                '''
+
+            }
+        }
+    post{
+        always{
+            echo 'ALWAYS RUN'
+        }
+        success{
+            echo "Run when Job passed"
+        }
+        failure{
+            echo 'Execute when Job Failed'
+        }
+        unstable{
+            echo 'When run is unstable'
+        }
+        changed{
+            echo 'Run when status changes w.r.t to last run'
+        }
+    
+
+
+    }
+    
+    }
+}
