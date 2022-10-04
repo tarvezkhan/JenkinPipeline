@@ -2,13 +2,15 @@ pipeline{
     agent any
     parameters{
         string(name: 'fname', defaultValue: 'Tarvez', description: '')
+        string(name: 'lname', defaultValue: 'Khan', description: '')
     }
     stages{
         stage('one'){
             steps{
-                sh'''
-                    echo Hello ${params.fname}
-                '''
+                
+                    "echo Hello ${params.fname}"
+                    "echo Hello ${params.lname}"
+                
 
             }
         }
