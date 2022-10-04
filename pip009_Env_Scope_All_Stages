@@ -1,7 +1,7 @@
 pipeline{
     agent any
     environment{
-        name='Tarvez'
+        name="Tarvez"
 
     }
     stages{
@@ -12,12 +12,12 @@ pipeline{
         }
         stage('Stage-2'){
             steps{
-                echo 'Hello ${name}'
+                echo "Hello ${name}"
             }
         }
         stage('Stage-3'){
             steps{
-                echo 'Hello ${name}'
+                echo "Hello ${name}"
             }
         }
     }
