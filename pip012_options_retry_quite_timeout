@@ -1,10 +1,9 @@
 pipeline{
     agent any
-    // environment{
-    //     name = "Tarvez"
-    // }
-    options{
-        retry(2)
+     options{
+        // retry(2)
+        quietPeriod(30)
+
     }
     stages{
         stage('one'){
