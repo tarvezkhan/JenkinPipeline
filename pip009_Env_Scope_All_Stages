@@ -1,0 +1,24 @@
+pipeline{
+    agent any
+    environment{
+        name='Tarvez'
+
+    }
+    stages{
+        stage('Stage-1'){
+            steps{
+                echo 'Hello ${name}'
+            }
+        }
+        stage('Stage-2'){
+            steps{
+                echo 'Hello ${name}'
+            }
+        }
+        stage('Stage-3'){
+            steps{
+                echo 'Hello ${name}'
+            }
+        }
+    }
+}
