@@ -4,7 +4,7 @@ pipeline{
         cred=credentials("test")
     }
     stages{
-        stage{
+        stage('one'){
             steps{
                 sh'''
                     echo "Hello ${test_USR}"
