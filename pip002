@@ -1,7 +1,7 @@
 pipeline{
   agent any
     stages{
-      stage (Stage-1-TK) {
+      stage (stage-1-TK) {
         steps{
           echo "stage-1-TK"
       
