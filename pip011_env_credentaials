@@ -1,0 +1,16 @@
+pipeline{
+    agent any
+    environment{
+        cred=credentials("test")
+    }
+    stages{
+        stage{
+            steps{
+                sh'''
+                    echo "Hello ${test_USR}"
+                    echo "Hello ${test_PWS}"
+                '''
+            }
+        }
+    }
+}
