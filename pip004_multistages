@@ -13,7 +13,7 @@ pipeline{
         stage ('build'){
             steps{
                 sh'''
-                echo 'Building'
+                echo 'Building build'
                 date
                 '''
             }
