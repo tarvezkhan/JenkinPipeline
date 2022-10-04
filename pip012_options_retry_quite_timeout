@@ -15,5 +15,14 @@ pipeline{
 
             }
         }
+        stage('two'){
+            steps{
+                
+                echo "Hello"
+
+                
+
+            }
+        }
     }
 }
