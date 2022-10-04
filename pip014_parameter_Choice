@@ -1,11 +1,13 @@
 pipeline{
     agent any
     parameters{
+        string(name: 'fname', defaultValue: 'Mr Tarvez', description: 'Who should I say hello to?')
         choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
     }
     stages{
         stage("One"){
             steps{
+                echo "Hello: ${params.fname}"
                 echo "you have Choose: ${params.CHOICE}"
             }
         }
