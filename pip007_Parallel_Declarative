@@ -1,0 +1,78 @@
+pipeline{
+    agent any
+    stages{
+        stage ('pre-build'){
+            steps{
+                sh'''
+                echo 'Pre-building Stage'
+                pwd
+                whoami
+                '''
+            }
+        }
+        stage ('build'){
+            steps{
+                sh'''
+                echo 'Building build'
+                date
+                '''
+            }
+        }
+        stage ('Unit-test'){
+            steps{
+                sh'''
+                echo 'Unit-test'
+                '''
+            }
+        }
+        stage ('Deploy'){
+            steps{
+                sh'''
+                echo 'Deploying'
+                '''
+            }
+        }
+        stage ('Selenium Test'){
+            parallel{
+                stage('Chrome'){
+                    steps{
+                        echo 'Chrome'
+                    }
+                }
+                stage('FF'){
+                    steps{
+                        echo 'FF'
+                    }
+                }
+                stage('Safari'){
+                    steps{
+                        echo 'Safari'
+                    }
+                }
+                stage('IE'){
+                    steps{
+                        echo 'IE'
+                    }
+                }
+                stage('Edge'){
+                    steps{
+                        echo 'Edge'
+                    }
+                }
+            }
+            
+        }
+        stage ('Deploy in Production'){
+            steps{
+                sh'''
+                echo 'Deploy in Production'
+                '''
+            }
+        }
+    }
+    post{
+        always{
+            echo "ALWAYS"
+        }
+    }
+}
