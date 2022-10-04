@@ -8,7 +8,7 @@ pipeline{
         stage('one'){
             steps{
                 
-                "echo Hello ${params.fname}"
+                echo "Hello ${params.fname}"
                 
             }
         }
