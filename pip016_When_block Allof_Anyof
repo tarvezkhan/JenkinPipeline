@@ -8,8 +8,8 @@ pipeline{
         stage('One'){
             when{
                 allOf{
-                    environment name:fname, value="Tarvez"
-                    environment name:lname, value="Khan"
+                    environment name:"fname", value="Tarvez"
+                    environment name:"lname", value="Khan"
                 }
             }
             steps{
@@ -19,8 +19,8 @@ pipeline{
         stage('two'){
             when{
                 anyOf{
-                    environment name:fname, value="Tarvez"
-                    environment name:lname, value="Khan"
+                    environment name:"fname", value="Tarvez"
+                    environment name:"lname", value="Khan"
                 }
             }
             steps{
