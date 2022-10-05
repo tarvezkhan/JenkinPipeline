@@ -1,0 +1,43 @@
+pipeline{
+    agent {
+        label 'ubuntunode1'
+    }
+    stages{
+        stage('one'){
+            steps{
+                echo "One"
+                
+            }
+        }
+        stage('two'){
+            steps{
+                echo "Two"
+                
+            }
+        }
+        stage('three'){
+            steps{
+                echo "Three"
+                
+            }
+        }
+        stage('four'){
+            steps{
+                echo "Four"
+                
+            }
+        }
+        stage('five'){
+            steps{
+                echo "Five"
+                
+            }
+        }
+    }
+}
+
+post{
+    always{
+        echo 'ALWAYS RUN'
+    }
+}
