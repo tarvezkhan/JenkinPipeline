@@ -1,0 +1,25 @@
+// Write pipeline using declarative syntax with one stage. 
+// Add string parameter to get Name, choice parameter to choose city out of Delhi/Kolkata/Mumbai, 
+// and a boolean parameter to check whether married or not. In stage, print the values of all parameters.
+
+
+
+pipeline {
+    agent any
+    parameters {
+        string(name: 'name', defaultValue: 'Tarvez', description: 'Get Name value')
+        choice(name: 'CITY', choices: ['Delhi', 'Kolkata', 'Mumbai'], description: 'Select any City')
+        booleanParam(name: 'MaritalStatus', defaultValue: true, description: 'Marrid Status')
+    }
+    stages {
+        stage('Stage-1') {
+            steps {
+                echo "Hello ${params.name}"
+
+                echo "You have selected: ${params.CITY}"
+
+                echo "and your married status is: ${params.MaritalStatus}"
+            }
+        }
+    }
+}
