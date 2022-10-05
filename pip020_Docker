@@ -1,3 +1,4 @@
+// Note, the below script will execute successfully when both Docker and Jenkins are on same machine
 pipeline{
     agent{
         docker{
