@@ -5,7 +5,9 @@
 
 
 pipeline {
-    agent any
+    agent {
+        label 'UbuntuNode1'
+    }
     parameters {
         string(name: 'name', defaultValue: 'Tarvez', description: 'Get Name value')
         choice(name: 'CITY', choices: ['Delhi', 'Kolkata', 'Mumbai'], description: 'Select any City')
