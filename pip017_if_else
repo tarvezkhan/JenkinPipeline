@@ -7,7 +7,7 @@ pipeline{
         stage('one'){
                 steps{
                     script{
-                        if (env.fname == "arvez"){
+                        if (env.fname == "Tarvez"){
                             echo "Hello ${fname}"
                         }
                             else{
