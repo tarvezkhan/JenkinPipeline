@@ -1,0 +1,21 @@
+pipeline{
+    agent any
+    stages{
+        stage('One'){
+            steps{
+                script{
+                    try{
+                        sh'''
+                            pwd
+                            uname -a
+                        ''' 
+                    }
+                    catch(e){
+                        echo "ERROR has occured"
+                    }
+                }
+
+            }
+        }
+    }
+}
