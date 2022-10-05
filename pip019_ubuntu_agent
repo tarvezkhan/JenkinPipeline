@@ -1,0 +1,12 @@
+pipeline{
+    agent {
+        label 'ubuntunode1'
+    }
+    stages{
+        stage('one'){
+            steps{
+                echo "Hello Ubuntu Agent"
+            }
+        }
+    }
+}
