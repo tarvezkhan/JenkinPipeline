@@ -6,7 +6,9 @@ pipeline{
         stage('one'){
             steps{
                 echo "Hello Ubuntu Agent"
-                sh pwd
+                sh''' 
+                    pwd
+                '''
             }
         }
     }
