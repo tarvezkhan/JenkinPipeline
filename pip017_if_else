@@ -11,7 +11,21 @@ pipeline{
                             echo "Hello ${fname}"
                         }
                             else{
-                            echo "You are in Else block"
+                            echo "You are in Else block-2"
+                    }
+
+                }
+
+            }
+            }
+            stage('two'){
+                steps{
+                    script{
+                        if (env.fname == "arvez"){
+                            echo "Hello ${fname}"
+                        }
+                            else{
+                            echo "You are in Else block-2"
                     }
 
                 }
