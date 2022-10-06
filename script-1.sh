@@ -1,4 +1,4 @@
 !#/bin/bash
-name="Tarvez"
-lname="Khan"
+name=$1
+lname=$2
 echo "Your First Name is $name and last name is $lname"
