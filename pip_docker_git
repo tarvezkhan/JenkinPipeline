@@ -15,5 +15,12 @@ pipeline{
                 '''
             }
         }
+        stage("JAVA Version"){
+            steps{
+                sh'''
+                    java --version
+                '''
+            }
+        }
     }
 }
